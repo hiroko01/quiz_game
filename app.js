@@ -8,6 +8,7 @@ const answers = [
 const correct = 'ニンテンドーDS';
 
 const $button = document.getElementsByTagName('button');
+const buttonLength = $button.length;
 
 //クイズの問題文、選択肢を定義
 const setupQuiz = () => {
@@ -30,15 +31,37 @@ const clickHandler = (e) => {
 };
 
 //ボタンをクリックしたら正誤判定
-$button[0].addEventListener('click', (e) => {
-  clickHandler(e);
-});
-$button[1].addEventListener('click', (e) => {
-  clickHandler(e);
-});
-$button[2].addEventListener('click', (e) => {
-  clickHandler(e);
-});
-$button[3].addEventListener('click', (e) => {
-  clickHandler(e);
-});
+let handlerIndex = 0;
+while (handlerIndex < buttonLength) {
+  $button[handlerIndex].addEventListener('click',(e) => {
+    clickHandler(e);
+  });
+  handlerIndex++;
+}
+
+
+
+
+
+
+// let handlerIndex = 0;
+// const buttonLength = $button.length;
+// while (handlerIndex < buttonLength) {
+//   $button[handlerIndex].addEventListener('click', (e) => {
+//     clickHandler(e);
+//   });
+//   handlerIndex++;
+// }
+
+// $button[0].addEventListener('click', (e) => {
+//   clickHandler(e);
+// });
+// $button[1].addEventListener('click', (e) => {
+//   clickHandler(e);
+// });
+// $button[2].addEventListener('click', (e) => {
+//   clickHandler(e);
+// });
+// $button[3].addEventListener('click', (e) => {
+//   clickHandler(e);
+// });
