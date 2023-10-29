@@ -7,29 +7,21 @@ const answers = [
 ];
 const correct = 'ニンテンドーDS';
 
-// console.log(document.getElementById('js-question'));
-// console.log(document.getElementById('js-question').textContent);
-
-//定数の文字列をHTMLに反映させる
-const setupQuiz = () => {
-
-}
-
-document.getElementById('js-question').textContent = question;
-
 const $button = document.getElementsByTagName('button');
 
-// $button[0].textContent = answers[0];
-// $button[1].textContent = answers[1];
-// $button[2].textContent = answers[2];
-// $button[3].textContent = answers[3];
-
-let buttonIndex = 0;
-let buttonLength = $button.length;
-while(buttonIndex < buttonLength){
-  $button[buttonIndex].textContent = answers[buttonIndex];
-  buttonIndex++;
+//クイズの問題文、選択肢を定義
+const setupQuiz = () => {
+  document.getElementById('js-question').textContent = question;
+  let buttonIndex = 0;
+  let buttonLength = $button.length;
+  while(buttonIndex < buttonLength){
+    $button[buttonIndex].textContent = answers[buttonIndex];
+    buttonIndex++;
+  }
 }
+setupQuiz();
+
+
 
 //ボタンをクリックしたら正誤判定
 $button[0].addEventListener('click', () => {
