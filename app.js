@@ -1,3 +1,36 @@
+const quiz = [
+  {
+    question: 'ゲーム市場、最も売れたゲーム機は次のうちどれ？',
+    answers: [
+      'スーパーファミコン',
+      'プレイステーション',
+      'ニンテンドースイッチ',
+      'ニンテンドーDS'
+  ],
+  correct: 'ニンテンドーDS'
+  },{
+    question: '糸井重里が企画に関わった、任天堂の看板ゲームといえば？',
+    answers: [
+      'MOTHER2',
+      'スーパーマリオブラザーズ3',
+      'スーパードンキーコング',
+      '星のカービィ'
+  ],
+  correct: 'MOTHER2'ß
+  },{
+    question: 'ファイナルファンタジーⅣの主人公の名前は？',
+    answers: [
+      'フリオニール',
+      'クラウド',
+      'ティーダ',
+      'セシル'
+  ],
+  correct: 'セシル'
+  }
+];
+const quizLength = quiz.length;
+let quizIndex = 0;
+
 const question = 'ゲーム市場、最も売れたゲーム機は次のうちどれ？';
 const answers = [
   'スーパーファミコン',
